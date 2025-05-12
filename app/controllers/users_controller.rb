@@ -13,9 +13,8 @@ class UsersController < ApplicationController
     @user.update(user_params)
     redirect_to user_path(@user.id)
   end
-  
-  def user_params
-    params.require(:user).permit(:name, :profile)
 
+  def user_params
+    params.require(:user).permit(:name, :profile_image)
   end
 end
