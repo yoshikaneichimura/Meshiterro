@@ -36,8 +36,9 @@
               <% end %>
           </div>
         </div>
+        
         <hr>
-
+        
         <div class="comments card-text">
           <h4><%= @post_image.post_comments.count %>件コメント</h4>
           <% @post_image.post_comments.each do |post_comment| %>
@@ -53,7 +54,9 @@
           </div>
           <% end %>
         </div>
+        
         <hr>
+        
         <div class="new-comment card-text">
           <%= form_with(model: [@post_image, @post_comment]) do |f| %>
           <div class="form-group">
